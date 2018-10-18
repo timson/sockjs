@@ -7,7 +7,7 @@ CACHE_CONTROL = 'no-store, no-cache, no-transform, must-revalidate, max-age=0'
 
 
 def cors_headers(headers, nocreds=False):
-    origin = headers.get(hdrs.ORIGIN, '*')
+    origin = '*'  #headers.get(hdrs.ORIGIN, '*')
     cors = ((hdrs.ACCESS_CONTROL_ALLOW_ORIGIN, origin),)
 
     ac_headers = headers.get(hdrs.ACCESS_CONTROL_REQUEST_HEADERS)
